@@ -1,6 +1,6 @@
 # Logistic Regression
 
-You can se the number observations: 43093. I am trying to find the relation between depression as response variable and antisocial personality disorder and generalized anxiety disorder as explantory  variables which indicates the presence or absence of desorders mentionated
+I am trying to find the relation between depression as response variable and antisocial personality disorder and generalized anxiety disorder as explantory  variables which indicates the presence or absence of desorders mentionated
 
 ###Output
 
