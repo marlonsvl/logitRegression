@@ -35,14 +35,14 @@ data['GENAXLIFE'] = pandas.to_numeric(data['GENAXLIFE'], errors='coerce')
 
 ##CREATE BINARY NICOTINE DEPENDENCE VARIABLE 
 
-def NICOTINEDEP(x):
+"""def NICOTINEDEP(x):
     if x['TAB12MDX'].any() == 1:
         return 1
     else:
         return 0
 sub1['NICOTINEDEP'] = sub1.apply (lambda x: NICOTINEDEP (x), axis=1)
 print(pandas.crosstab(sub1['TAB12MDX'], sub1['NICOTINEDEP']))
-
+"""
 # LOGISTIC REGRESSION SOCIAL PHOBIA
 
 #lreg1 = smf.logit(formula = 'NICOTINEDEP ~ SOCPDLIFE + MAJORDEPLIFE', data = sub1).fit()
