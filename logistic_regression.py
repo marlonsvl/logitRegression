@@ -25,6 +25,7 @@ data['TAB12MDX'] = pandas.to_numeric(data['TAB12MDX'], errors='coerce')
 data['SOCPDLIFE'] = pandas.to_numeric(data['SOCPDLIFE'], errors='coerce')
 data['MAJORDEPLIFE'] = pandas.to_numeric(data['MAJORDEPLIFE'], errors='coerce')
 data['ANTISOCDX2'] = pandas.to_numeric(data['ANTISOCDX2'], errors='coerce')
+data['GENAXLIFE'] = pandas.to_numeric(data['GENAXLIFE'], errors='coerce')
 
 
 # SUBSET DATA
@@ -45,7 +46,7 @@ print(pandas.crosstab(sub1['TAB12MDX'], sub1['NICOTINEDEP']))
 # LOGISTIC REGRESSION SOCIAL PHOBIA
 
 #lreg1 = smf.logit(formula = 'NICOTINEDEP ~ SOCPDLIFE + MAJORDEPLIFE', data = sub1).fit()
-lreg1 = smf.logit(formula = 'TAB12MDX ~ SOCPDLIFE + MAJORDEPLIFE', data = data).fit()
+lreg1 = smf.logit(formula = 'MAJORDEPLIFE ~ ANTISOCDX2 + GENAXLIFE', data = data).fit()
 print(lreg1.summary())
 
 ## odds ratios
